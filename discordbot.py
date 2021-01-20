@@ -24,6 +24,8 @@ async def on_message(message):
     # 「/neko」と発言したら「にゃーん」が返る処理
     if message.content == '/neko':
         await message.channel.send('にゃーん')
+    if message.content == '!knらん':
+        await message.channel.send('あなたは - ')
 
 @bot.event
 async def on_command_error(ctx, error):
