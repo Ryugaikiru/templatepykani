@@ -33,6 +33,7 @@ def shuffling():
         sayuu = randomweapon()
         weaponset = ('右手：' + sayuu[0] + '　左手：' + sayuu[1])
     else:
+        sayuu = randomweapon()
         weaponset = ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
 
 
@@ -56,15 +57,15 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-    
-    
+
+
 async def ran(ctx):
     weaponset = 0
     shuffling()
     arandomizer = '\nあなたは - ' + randomcrab() + '\n' + weaponset
     await ctx.send(arandomizer)
-    
-    
+
+
 async def sin(ctx):
     weaponset = 0
     shuffling()
@@ -72,8 +73,8 @@ async def sin(ctx):
     shuffling()
     brandomizer += '\n' + '\n' + 'ゲスト：' + randomcrab() + '\n' + weaponset
     await ctx.send(brandomizer)
-    
-    
+
+
 async def tag(ctx):
     weaponset = 0
     shuffling()
