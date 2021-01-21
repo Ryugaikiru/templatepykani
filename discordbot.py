@@ -1,4 +1,3 @@
-import discord
 from discord.ext import commands
 import os
 import traceback
@@ -33,7 +32,7 @@ def randomweapon():
 
 
 def shuffling():
-    if random.int(0, 1) == 0:
+    if random.randint(0, 1) == 0:
         sayuu = randomweapon()
         return ('右手：' + sayuu[0] + '　左手：' + sayuu[1])
     else:
