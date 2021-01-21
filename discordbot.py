@@ -4,7 +4,7 @@ import os
 import traceback
 import random
 
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(command_prefix='!kn')
 token = os.environ['DISCORD_BOT_TOKEN']
 
 def randomcrab():
@@ -56,19 +56,25 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-async def knran(ctx):
+    
+    
+async def ran(ctx):
     weaponset = 0
     shuffling()
     arandomizer = '\nあなたは - ' + randomcrab() + '\n' + weaponset
     await ctx.send(arandomizer)
-async def knsin(ctx):
+    
+    
+async def sin(ctx):
     weaponset = 0
     shuffling()
     brandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
     shuffling()
     brandomizer += '\n' + '\n' + 'ゲスト：' + randomcrab() + '\n' + weaponset
     await ctx.send(brandomizer)
-async def kntag(ctx):
+    
+    
+async def tag(ctx):
     weaponset = 0
     shuffling()
     drandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
@@ -79,5 +85,6 @@ async def kntag(ctx):
     shuffling()
     drandomizer += '\n' + '\n' + '対面のパートナー：' + randomcrab() + '\n' + weaponset
     await ctx.send(drandomizer)
+
 
 bot.run(token)
