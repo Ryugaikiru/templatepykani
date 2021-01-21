@@ -4,8 +4,6 @@ import os
 import traceback
 import random
 
-TOKEN = 'ODAwOTA1NTIzNjI5MTI5NzQ4.YAY7ZA.svJ5vZqfv2La7bLFIafZw5n2Ug4'
-
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
