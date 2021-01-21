@@ -94,3 +94,4 @@ def shuffling():
     else:
         sayuu = randomweapon()
         weaponset = ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
+
