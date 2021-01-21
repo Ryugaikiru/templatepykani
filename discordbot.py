@@ -26,13 +26,15 @@ def randomweapon():
                 weaponl.append(names[num])
     else:
         weaponl.append(r)
-    larm = random.choice weaponl
+    larm = random.choice(weaponl)
     return [r, larm]
 def shuffling():
     if random.int(0, 1) == 0:
         weaponset = ('右手：' + sayuu[0] + '　左手：' + sayuu[1])
     else:
         weaponset = ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
+
+
 # 接続に必要なオブジェクトを生成
 client = discord.Client()
 
