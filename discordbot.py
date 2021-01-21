@@ -31,32 +31,29 @@ async def pinpin(ctx):
 
 @bot.command()
 async def ran(ctx):
-    weaponset = 0
-    shuffling()
+    weaponset = shuffling()
     arandomizer = '\nあなたは - ' + randomcrab() + '\n' + weaponset
     await ctx.send(arandomizer)
 
 
 @bot.command()
 async def sin(ctx):
-    weaponset = 0
-    shuffling()
+    weaponset = shuffling()
     brandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
-    shuffling()
+    weaponset = shuffling()
     brandomizer += '\n' + '\n' + 'ゲスト：' + randomcrab() + '\n' + weaponset
     await ctx.send(brandomizer)
 
 
 @bot.command()
 async def tag(ctx):
-    weaponset = 0
-    shuffling()
+    weaponset = shuffling()
     drandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
-    shuffling()
+    weaponset = shuffling()
     drandomizer += '\n' + '\n' + 'ホストのパートナー：' + randomcrab() + '\n' + weaponset
-    shuffling()
+    weaponset = shuffling()
     drandomizer += '\n' + '\n' + 'ホストの対面：' + randomcrab() + '\n' + weaponset
-    shuffling()
+    weaponset = shuffling()
     drandomizer += '\n' + '\n' + '対面のパートナー：' + randomcrab() + '\n' + weaponset
     await ctx.send(drandomizer)
 
@@ -90,8 +87,7 @@ def randomweapon():
 def shuffling():
     if random.int(0, 1) == 0:
         sayuu = randomweapon()
-        weaponset = ('右手：' + sayuu[0] + '　左手：' + sayuu[1])
+        return ('右手：' + sayuu[0] + '　左手：' + sayuu[1])
     else:
         sayuu = randomweapon()
-        weaponset = ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
-
+        return = ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
