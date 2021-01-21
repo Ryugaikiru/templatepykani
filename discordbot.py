@@ -21,11 +21,11 @@ def randomweapon():
     weaponl = []
     if rtype == '片手':
         for num in range(48):
-            if weapon[names[num]] == '片手':
+            if weapon[names[num]] != '両手':
                 weaponl.append(names[num])
     elif rtype == 'のりもの':
         for num in range(48):
-            if weapon[names[num]] == 'のりもの':
+            if weapon[names[num]] == '片手':
                 weaponl.append(names[num])
     else:
         weaponl.append(r)
