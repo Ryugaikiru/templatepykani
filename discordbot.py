@@ -2,6 +2,7 @@ from discord.ext import commands
 import os
 import traceback
 import random
+import discord # ここでdiscord.pyの読み込み
 
 bot = commands.Bot(command_prefix='!kn')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -39,7 +40,12 @@ def shuffling():
         sayuu = randomweapon()
         return ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
 
-
+@client.event
+async def on_ready(): # botが起動したときに動作する処理
+    print('ログインしました')
+    await client.change_presence(activity=discord.Game(name="稼働中", type=1))
+    
+    
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
