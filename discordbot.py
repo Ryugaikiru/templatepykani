@@ -57,19 +57,25 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
-      def ran(ctx):
+
+
+async def ran(ctx):
     weaponset = 0
     shuffling()
     arandomizer = '\nあなたは - ' + randomcrab() + '\n' + weaponset
     await ctx.send(arandomizer)
-      def sin(ctx):
+
+
+async def sin(ctx):
     weaponset = 0
     shuffling()
     brandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
     shuffling()
     brandomizer += '\n' + '\n' + 'ゲスト：' + randomcrab() + '\n' + weaponset
     await ctx.send(brandomizer)
-     def tag(ctx):
+
+
+async def tag(ctx):
     weaponset = 0
     shuffling()
     drandomizer = '\nホスト：' + randomcrab() + '\n' + weaponset
