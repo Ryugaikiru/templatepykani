@@ -29,6 +29,7 @@ async def pinpin(ctx):
     await ctx.send('pong')
 
 
+@bot.command()
 async def ran(ctx):
     weaponset = 0
     shuffling()
@@ -36,6 +37,7 @@ async def ran(ctx):
     await ctx.send(arandomizer)
 
 
+@bot.command()
 async def sin(ctx):
     weaponset = 0
     shuffling()
@@ -45,6 +47,7 @@ async def sin(ctx):
     await ctx.send(brandomizer)
 
 
+@bot.command()
 async def tag(ctx):
     weaponset = 0
     shuffling()
