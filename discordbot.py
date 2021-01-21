@@ -2,10 +2,11 @@ from discord.ext import commands
 import os
 import traceback
 import random
-import discord # ここでdiscord.pyの読み込み
+import discord
 
 bot = commands.Bot(command_prefix='!kn')
 token = os.environ['DISCORD_BOT_TOKEN']
+client = discord.Client()
 
 def randomcrab():
     crab = ['ズワイガニ', 'ガザミ', 'トラフカラッパ', 'エンコウガニ', 'ヒシガニ', 'ケガニ', 'ベニイワガニ', 'モズクガニ', 'アサヒガニ', 'ロブスター', 'ダンジネスクラブ', 'クリスマスアカガニ', 'ノコギリガザミ', 'オオホモラ', 'ヤシガニ', 'タラバガニ', 'オオカイカムリ', 'タカアシガニ', 'メタルクラブ', 'タスマニアオオガニ', 'シャコ', 'シオマネキ', 'ハナサキガニ']
@@ -41,11 +42,10 @@ def shuffling():
         return ('右手：' + sayuu[1] + '　左手：' + sayuu[0])
 
 @client.event
-async def on_ready(): # botが起動したときに動作する処理
-    print('ログインしました')
+async def on_ready():
     await client.change_presence(activity=discord.Game(name="稼働中", type=1))
-    
-    
+
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
