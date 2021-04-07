@@ -84,7 +84,7 @@ def shuffling():
     if random.randint(0, 1) == 0:  # 0がでたら
         sayuu = randomweapon()
         return ('右手：' + sayuu[0] + '　左手：' + sayuu[1])  # 入れ替えない
-    else: # 1がでたら
+    else:  # 1がでたら
         sayuu = randomweapon()
         return ('右手：' + sayuu[1] + '　左手：' + sayuu[0])  # 入れ替える
 
@@ -94,7 +94,7 @@ def shufflingEN():
     if random.randint(0, 1) == 0:  # 0がでたら/ If 0 appears
         sayuu = randomweaponEN()
         return ('Right:' + sayuu[0] + '　Left:' + sayuu[1])  # 入れ替えない/ Change
-    else: # 1がでたら/ If 1 appears
+    else:  # 1がでたら/ If 1 appears
         sayuu = randomweaponEN()
         return ('Right:' + sayuu[1] + '　Left:' + sayuu[0])  # 入れ替える/ Don't change
 
