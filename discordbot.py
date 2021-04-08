@@ -149,4 +149,12 @@ async def tag(ctx):
     await ctx.send(drandomizer)
 
 
+@bot.command()
+async def ranEN(ctx):
+    """Randomize one set of crabs and weapons. For one person."""
+    weaponset = shufflingEN()
+    arandomizer = '\nYou are - ' + randomcrabEN() + '\n' + weaponset
+    await ctx.send(arandomizer)
+
+
 bot.run(token)
