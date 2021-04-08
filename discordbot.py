@@ -162,9 +162,23 @@ async def sinEN(ctx):
     """Randomize two set of crabs and weapons. For one-on-one battle"""
     weaponset = shufflingEN()
     brandomizer = '\nHost:' + randomcrabEN() + '\n' + weaponset
-    weaponset = shufflingEN)
+    weaponset = shufflingEN()
     brandomizer += '\n' + '\n' + 'guest：' + randomcrabEN() + '\n' + weaponset
     await ctx.send(brandomizer)
+
+
+@bot.command()
+async def tagEN(ctx):
+    """Randomize four set of crabs and weapons. For tag buttle (no problem if you want to use sinEN command twice)."""
+    weaponset = shuffling()
+    drandomizer = '\nHost:' + randomcrabEN() + '\n' + weaponset
+    weaponset = shuffling()
+    drandomizer += '\n' + '\n' + "Host's buddy:" + randomcrabEN() + '\n' + weaponset
+    weaponset = shuffling()
+    drandomizer += '\n' + '\n' + 'Left guest:' + randomcrabEN() + '\n' + weaponset
+    weaponset = shuffling()
+    drandomizer += '\n' + '\n' + 'Right guest:' + randomcrabEN() + '\n' + weaponset
+    await ctx.send(drandomizer)
 
 
 bot.run(token)
