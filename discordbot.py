@@ -157,4 +157,14 @@ async def ranEN(ctx):
     await ctx.send(arandomizer)
 
 
+@bot.command()
+async def sinEN(ctx):
+    """Randomize two set of crabs and weapons. For one-on-one battle"""
+    weaponset = shufflingEN()
+    brandomizer = '\nHost:' + randomcrabEN() + '\n' + weaponset
+    weaponset = shufflingEN)
+    brandomizer += '\n' + '\n' + 'guest：' + randomcrabEN() + '\n' + weaponset
+    await ctx.send(brandomizer)
+
+
 bot.run(token)
