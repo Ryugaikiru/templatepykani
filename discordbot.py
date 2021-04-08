@@ -93,10 +93,10 @@ def shufflingEN():
     # 左右の武器が偏らないようにランダムで入れ替える/ Randomly replace the left and right weapons so that they are not biased
     if random.randint(0, 1) == 0:  # 0がでたら/ If 0 appears
         sayuu = randomweaponEN()
-        return ('Right:' + sayuu[0] + '　Left:' + sayuu[1])  # 入れ替えない/ Change
+        return ('Right: ' + sayuu[0] + '　Left: ' + sayuu[1])  # 入れ替えない/ Change
     else:  # 1がでたら/ If 1 appears
         sayuu = randomweaponEN()
-        return ('Right:' + sayuu[1] + '　Left:' + sayuu[0])  # 入れ替える/ Don't change
+        return ('Right: ' + sayuu[1] + '　Left: ' + sayuu[0])  # 入れ替える/ Don't change
 
 
 @client.event
@@ -161,23 +161,23 @@ async def ranEN(ctx):
 async def sinEN(ctx):
     """Randomize two set of crabs and weapons. For one-on-one battle"""
     weaponset = shufflingEN()
-    brandomizer = '\nHost:' + randomcrabEN() + '\n' + weaponset
+    brandomizer = '\nHost: ' + randomcrabEN() + '\n' + weaponset
     weaponset = shufflingEN()
-    brandomizer += '\n' + '\n' + 'guest：' + randomcrabEN() + '\n' + weaponset
+    brandomizer += '\n' + '\n' + 'Guest: ' + randomcrabEN() + '\n' + weaponset
     await ctx.send(brandomizer)
 
 
 @bot.command()
 async def tagEN(ctx):
     """Randomize four set of crabs and weapons. For tag buttle (no problem if you want to use sinEN command twice)."""
-    weaponset = shuffling()
-    drandomizer = '\nHost:' + randomcrabEN() + '\n' + weaponset
-    weaponset = shuffling()
-    drandomizer += '\n' + '\n' + "Host's buddy:" + randomcrabEN() + '\n' + weaponset
-    weaponset = shuffling()
-    drandomizer += '\n' + '\n' + 'Left guest:' + randomcrabEN() + '\n' + weaponset
-    weaponset = shuffling()
-    drandomizer += '\n' + '\n' + 'Right guest:' + randomcrabEN() + '\n' + weaponset
+    weaponset = shufflingEN()
+    drandomizer = '\nHost: ' + randomcrabEN() + '\n' + weaponset
+    weaponset = shufflingEN()
+    drandomizer += '\n' + '\n' + "Host's Buddy: " + randomcrabEN() + '\n' + weaponset
+    weaponset = shufflingEN()
+    drandomizer += '\n' + '\n' + 'Left Guest: ' + randomcrabEN() + '\n' + weaponset
+    weaponset = shufflingEN()
+    drandomizer += '\n' + '\n' + 'Right Guest: ' + randomcrabEN() + '\n' + weaponset
     await ctx.send(drandomizer)
 
 
