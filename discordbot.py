@@ -187,7 +187,7 @@ async def tournament(ctx):
     weaponset1 = shuffling()
     weaponset2 = shuffling()
     weaponset3 = shuffling()
-    arandomizer = '\nカニ - ' + randomcrab() + ' & ' + randomcrab() + '\nセット1 - ' + weaponset1 + '\nセット2 - ' + weaponset + '\nセット3 - ' + weaponset
+    arandomizer = '\nカニ - ' + randomcrab() + ' & ' + randomcrab() + '\nセット1 - ' + weaponset1 + '\nセット2 - ' + weaponset2 + '\nセット3 - ' + weaponset3
     await ctx.send(arandomizer)
 
 
