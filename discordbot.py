@@ -180,5 +180,15 @@ async def tagEN(ctx):
     drandomizer += '\n' + '\n' + 'Right Guest: ' + randomcrabEN() + '\n' + weaponset
     await ctx.send(drandomizer)
 
+    
+@bot.command()
+async def tournament(ctx):
+    """武器抽選杯用のコマンド。カニ２種類と武器３セットを抽選する。"""
+    weaponset1 = shuffling()
+    weaponset2 = shuffling()
+    weaponset3 = shuffling()
+    arandomizer = '\nカニ - ' + randomcrab() + ' & ' + randomcrab() + '\nセット1 - ' + weaponset1 + '\nセット2 - ' + weaponset + '\nセット3 - ' + weaponset
+    await ctx.send(arandomizer)
+
 
 bot.run(token)
