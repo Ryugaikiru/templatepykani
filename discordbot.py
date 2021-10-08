@@ -151,11 +151,10 @@ async def tag(ctx):
 
 @bot.command()
 async def tournament(ctx):
-    """武器抽選杯用のコマンド。カニ２種類と武器３セットを抽選する。"""
+    """武器抽選杯用のコマンド。カニ２種類と武器２セットを抽選する。"""
     weaponset1 = shuffling()
     weaponset2 = shuffling()
-    weaponset3 = shuffling()
-    arandomizer = '\n使用可能なカニ達 - ' + randomcrab() + ' ＆ ' + randomcrab() + '\nセット1 - ' + weaponset1 + '\nセット2 - ' + weaponset2 + '\nセット3 - ' + weaponset3
+    arandomizer = '\n使用可能なカニ達 - ' + randomcrab() + ' ＆ ' + randomcrab() + ' \nセット1 - ' + weaponset1 + ' \n\nセット2 - ' + weaponset2
     await ctx.send(arandomizer)
 
 
@@ -193,11 +192,10 @@ async def tagEN(ctx):
 
 @bot.command()
 async def tournamentEN(ctx):
-    """Command for random weapon&crab tournament.Randomize 2 crabs and 3 weapon sets"""
+    """Command for random weapon&crab tournament.Randomize 2 crabs and 2 weapon sets"""
     weaponset1 = shufflingEN()
     weaponset2 = shufflingEN()
-    weaponset3 = shufflingEN()
-    arandomizer = '\nusable crab - ' + randomcrabEN() + ' & ' + randomcrabEN() + '\nset1 - ' + weaponset1 + '\nset2 - ' + weaponset2 + '\nset3 - ' + weaponset3
+    arandomizer = '\nusable crab - ' + randomcrabEN() + ' & ' + randomcrabEN() + ' \nset1 - ' + weaponset1 + ' \n\nset2 - ' + weaponset2
     await ctx.send(arandomizer)
 
 
