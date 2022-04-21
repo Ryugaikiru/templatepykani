@@ -112,9 +112,9 @@ async def on_command_error(ctx, error):
 
 
 @bot.command()
-async def pingping(ctx):
+async def ijou(ctx):
     """特に意味はない"""
-    await ctx.send('pong')
+    await ctx.send('異常なし1')
 
 
 @bot.command()
