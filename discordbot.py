@@ -33,13 +33,13 @@ def randomweapon():
     weaponl = []  # 左に装備可能な武器を入れる空の配列を作成
     if rtype == '片手':
         # 片手武器を装備していた場合
-        for num in range(48):
+        for num in range(49):
             # 両手以外、つまり片手武器とのりものをリストに追加
             if weapon[names[num]] != '両手':
                 weaponl.append(names[num])
     elif rtype == 'のりもの':
         # のりものを装備していた場合
-        for num in range(48):
+        for num in range(49):
             # 片手武器のみをリストに追加
             if weapon[names[num]] == '片手':
                 weaponl.append(names[num])
@@ -61,13 +61,13 @@ def randomweaponEN():
     weaponl = []  # 左に装備可能な武器を入れる空の配列を作成/ Create the empty list of weapons that is possible to equip on the left arm
     if rtype == '片手':
         # 片手武器を装備していた場合/ if the equipment is a one handed weapon
-        for num in range(48):
+        for num in range(49):
             # 両手以外、つまり片手武器とのりものをリストに追加/ add one handed weapon and　vehicle to the possible weapon list
             if weapon[names[num]] != '両手':
                 weaponl.append(names[num])
     elif rtype == 'のりもの':
         # のりものを装備していた場合/ if the equipment is a vehicle
-        for num in range(48):
+        for num in range(49):
             # 片手武器のみをリストに追加
             if weapon[names[num]] == '片手':
                 weaponl.append(names[num])
